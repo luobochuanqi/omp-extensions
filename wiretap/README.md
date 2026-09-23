@@ -19,7 +19,11 @@ byte, and renders them as an in-transcript inspector card.
 ## Install
 
 ```sh
-# once, from a checkout
+# from the marketplace (recommended)
+omp plugin marketplace add <owner>/omp-extensions
+omp plugin install wiretap@omp-extensions
+
+# or once, from a checkout
 omp --extension /path/to/omp-extensions/wiretap
 
 # or persistent: ~/.omp/agent/config.yml
