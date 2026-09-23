@@ -9,15 +9,7 @@ Captures every provider request the session sends — the exact JSON body that
 goes on the wire — plus the paired response status, headers, and time-to-first-
 byte, and renders them as an in-transcript inspector card.
 
-```
-🌐 WIRETAP                                        7 requests · 2 evicted · 4.6 MB
-──────────────────────────────────────────────────────────────────────────────
-#  WHEN  ENDPOINT                                          ST   TTFB    SIZE
-6  1m    anthropic/claude-sonnet-4-5                      200  1.10s  192 KB
-7  30s   openai/gpt-5.2-codex                             500  30.2s  393 KB
-8  12s   anthropic/claude-sonnet-4-5                      200  2.41s  196 KB
-9  now   anthropic/claude-sonnet-4-5                      ···      —  198 KB
-```
+![wiretap demo](https://raw.githubusercontent.com/luobochuanqi/omp-extensions/main/wiretap/wiretap-demo.gif)
 
 ## Install
 

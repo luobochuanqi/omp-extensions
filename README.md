@@ -1,8 +1,13 @@
 # omp-extensions
 
+[![GitHub tag](https://img.shields.io/github/v/tag/luobochuanqi/omp-extensions)](https://github.com/luobochuanqi/omp-extensions/tags)
+[![license](https://img.shields.io/github/license/luobochuanqi/omp-extensions)](./LICENSE)
+
 A monorepo of extensions for [oh-my-pi](https://omp.sh) (omp), distributed as
 an omp plugin marketplace and on npm (listed in the
 [pi.dev package catalog](https://pi.dev/packages)). Install either way:
+
+![wiretap demo](https://raw.githubusercontent.com/luobochuanqi/omp-extensions/main/wiretap/wiretap-demo.gif)
 
 ```sh
 # npm
@@ -71,4 +76,4 @@ entries; upgrade explicitly with `omp plugin upgrade wiretap@omp-extensions`.
 
 ## License
 
-MIT — see each extension's `LICENSE`.
+MIT — see [LICENSE](./LICENSE) (and each extension's own copy).
