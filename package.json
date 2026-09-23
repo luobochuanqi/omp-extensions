@@ -1,0 +1,24 @@
+{
+	"name": "omp-wiretap",
+	"version": "0.1.0",
+	"description": "Raw LLM network request inspector for oh-my-pi (omp)",
+	"license": "MIT",
+	"type": "module",
+	"omp": {
+		"extensions": [
+			"./index.ts"
+		]
+	},
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"selfcheck": "bun selfcheck.ts",
+		"preview": "bun preview.ts"
+	},
+	"devDependencies": {
+		"@oh-my-pi/pi-ai": "18.2.11",
+		"@oh-my-pi/pi-coding-agent": "18.2.11",
+		"@oh-my-pi/pi-tui": "18.2.11",
+		"@types/node": "^22.0.0",
+		"typescript": "^5.9.0"
+	}
+}
