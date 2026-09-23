@@ -13,6 +13,13 @@
 	"author": "luobo <luobochuanqi@qq.com>",
 	"license": "MIT",
 	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/luobochuanqi/omp-extensions.git",
+		"directory": "wiretap"
+	},
+	"homepage": "https://github.com/luobochuanqi/omp-extensions/tree/main/wiretap",
+	"bugs": "https://github.com/luobochuanqi/omp-extensions/issues",
 	"files": [
 		"index.ts",
 		"render.ts"

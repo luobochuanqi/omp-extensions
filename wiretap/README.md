@@ -20,7 +20,7 @@ byte, and renders them as an in-transcript inspector card.
 
 ```sh
 # from the marketplace (recommended)
-omp plugin marketplace add <owner>/omp-extensions
+omp plugin marketplace add luobochuanqi/omp-extensions
 omp plugin install wiretap@omp-extensions
 
 # or once, from a checkout
