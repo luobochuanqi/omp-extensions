@@ -2,8 +2,21 @@
 	"name": "omp-wiretap",
 	"version": "0.1.0",
 	"description": "Raw LLM network request inspector for oh-my-pi (omp)",
+	"keywords": [
+		"omp",
+		"oh-my-pi",
+		"extension",
+		"plugin",
+		"debugging",
+		"network"
+	],
+	"author": "luobo <luobochuanqi@qq.com>",
 	"license": "MIT",
 	"type": "module",
+	"files": [
+		"index.ts",
+		"render.ts"
+	],
 	"omp": {
 		"extensions": [
 			"./index.ts"
