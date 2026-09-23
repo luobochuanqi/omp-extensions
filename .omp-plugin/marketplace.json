@@ -1,26 +1,22 @@
 {
-	"$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-	"name": "omp-extensions",
-	"owner": {
-		"name": "luobo"
-	},
-	"metadata": {
-		"description": "Extensions for oh-my-pi (omp) by luobo"
-	},
-	"plugins": [
-		{
-			"name": "wiretap",
-			"description": "Raw LLM network request inspector — capture the exact provider wire payload, response status/headers/TTFB, inspect via /wire",
-			"source": "./wiretap",
-			"category": "development",
-			"license": "MIT",
-			"homepage": "https://github.com/luobochuanqi/omp-extensions/tree/main/wiretap",
-			"repository": "https://github.com/luobochuanqi/omp-extensions",
-			"keywords": [
-				"debugging",
-				"network",
-				"inspector"
-			]
-		}
-	]
+    "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+    "name": "omp-extensions",
+    "owner": {
+        "name": "Carota"
+    },
+    "metadata": {
+        "description": "Extensions for oh-my-pi (omp) by Carota"
+    },
+    "plugins": [
+        {
+            "name": "wiretap",
+            "description": "Raw LLM network request inspector — capture the exact provider wire payload, response status/headers/TTFB, inspect via /wire",
+            "source": "./wiretap",
+            "category": "development",
+            "license": "MIT",
+            "homepage": "https://github.com/luobochuanqi/omp-extensions/tree/main/wiretap",
+            "repository": "https://github.com/luobochuanqi/omp-extensions",
+            "keywords": ["debugging", "network", "inspector"]
+        }
+    ]
 }
