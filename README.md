@@ -1,9 +1,14 @@
 # omp-extensions
 
 A monorepo of extensions for [oh-my-pi](https://omp.sh) (omp), distributed as
-an omp plugin marketplace. Add it once, install any extension:
+an omp plugin marketplace and on npm (listed in the
+[pi.dev package catalog](https://pi.dev/packages)). Install either way:
 
 ```sh
+# npm
+omp plugin install omp-wiretap
+
+# or this repo as a marketplace — add once, install any extension
 omp plugin marketplace add luobochuanqi/omp-extensions
 omp plugin install wiretap@omp-extensions
 ```
@@ -49,6 +54,8 @@ against a throwaway surface and rolls back the install on failure.
 2. Commit, then tag `<extension>-vX.Y.Z` (tags anchor history; marketplace
    installs track the default branch).
 3. Push `main` and the tag.
+4. `npm publish` from the extension directory — updates the npm channel and
+   the pi.dev catalog listing (marketplace users get it via upgrade).
 
 The catalog deliberately omits per-plugin `version` — installs read it from
 the plugin manifest, keeping one source of truth. Consequence: the bulk

@@ -1,5 +1,8 @@
 # wiretap
 
+[![npm version](https://img.shields.io/npm/v/omp-wiretap)](https://www.npmjs.com/package/omp-wiretap)
+[![npm downloads](https://img.shields.io/npm/dm/omp-wiretap)](https://pi.dev/packages/omp-wiretap)
+
 Raw LLM network request inspector for [oh-my-pi](https://omp.sh) (omp).
 
 Captures every provider request the session sends — the exact JSON body that
@@ -19,7 +22,10 @@ byte, and renders them as an in-transcript inspector card.
 ## Install
 
 ```sh
-# from the marketplace (recommended)
+# npm — also listed in the pi.dev package catalog
+omp plugin install omp-wiretap
+
+# or from the marketplace repo
 omp plugin marketplace add luobochuanqi/omp-extensions
 omp plugin install wiretap@omp-extensions
 
@@ -87,4 +93,11 @@ bun run typecheck   # tsc --noEmit against pinned @oh-my-pi/* types
 bun run selfcheck   # drives the factory with a mock ExtensionAPI; asserts capture/pairing/eviction/views
 bun run preview     # renders sample list/detail/note cards against the real dark theme
 bun preview.ts 80   # preview at a specific terminal width
+```
+
+Record the demo GIF with [vhs](https://github.com/charmbracelet/vhs)
+(runs a real session — uses your configured model/credentials):
+
+```sh
+vhs < demo.tape
 ```
