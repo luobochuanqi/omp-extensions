@@ -1,6 +1,6 @@
 {
 	"name": "omp-wiretap",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "Raw LLM network request inspector for oh-my-pi (omp)",
 	"keywords": [
 		"omp",

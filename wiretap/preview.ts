@@ -70,8 +70,7 @@ const views: [string, WiretapDetails][] = [
 		"LIST",
 		{
 			kind: "list",
-			dropped: 2,
-			bufferedBytes: 4_812_300,
+			storedBytes: 4_812_300,
 			requests: [
 				req(3, 190, { status: 200, durationMs: 1240, requestId: "req_01JZ3" }),
 				req(4, 145, { status: 200, durationMs: 843 }),
@@ -98,7 +97,7 @@ const views: [string, WiretapDetails][] = [
 			notes: ["showing 600 of 812 lines — /wire dump 8 exports the full body"],
 		},
 	],
-	["LIST (empty)", { kind: "list", requests: [], dropped: 0, bufferedBytes: 0 }],
+	["LIST (empty)", { kind: "list", requests: [], storedBytes: 0 }],
 	["NOTE (error)", { kind: "note", text: "wiretap command failed: boom", tone: "error" }],
 ];
 

@@ -14,7 +14,7 @@ export interface WireRequest {
 	modelId: string;
 	modelName: string;
 	baseUrl: string;
-	/** Size of the full serialized body in bytes, before any capture clipping. */
+	/** Size of the full serialized body in characters (display sizing), before any capture clipping. */
 	bytes: number;
 	/** Undefined while the response has not been paired. */
 	status?: number;
@@ -24,7 +24,14 @@ export interface WireRequest {
 }
 
 export type WiretapDetails =
-	| { kind: "list"; requests: WireRequest[]; dropped: number; bufferedBytes: number }
+	| {
+			kind: "list";
+			requests: WireRequest[];
+			/** Total bytes held by the session store (disk + in-memory fallback). */
+			storedBytes?: number;
+			/** Legacy size field so cards persisted in earlier sessions still render. */
+			bufferedBytes?: number;
+	  }
 	| {
 			kind: "detail";
 			request: WireRequest;
@@ -215,15 +222,16 @@ class WiretapCard implements Component {
 	#renderList(width: number, d: Extract<WiretapDetails, { kind: "list" }>): string[] {
 		const t = this.#theme;
 		const n = d.requests.length;
+		const size = d.storedBytes ?? d.bufferedBytes;
 		const right =
 			n > 0
-				? `${n} request${n === 1 ? "" : "s"}${d.dropped > 0 ? ` · ${d.dropped} evicted` : ""} · ${humanBytes(d.bufferedBytes)}`
+				? `${n} request${n === 1 ? "" : "s"}${size === undefined ? "" : ` · ${humanBytes(size)}`}`
 				: "idle";
 		const lines = this.#header(width, right);
 
 		if (d.requests.length === 0) {
 			lines.push(
-				t.fg("dim", `${t.status.pending} no requests captured yet — the buffer fills as this session talks to providers`),
+				t.fg("dim", `${t.status.pending} no requests captured yet — captures accumulate as this session talks to providers`),
 			);
 			return lines.map(l => this.#fit(l, width));
 		}
