@@ -22,7 +22,7 @@ omp plugin install wiretap@omp-extensions
 
 | Extension | Version | Description |
 | --- | --- | --- |
-| [wiretap](./wiretap) | 0.1.0 | Raw LLM network request inspector — captures the exact provider wire payload plus response status, headers, and TTFB; inspect in-transcript via `/wire`. |
+| [wiretap](./wiretap) | 0.2.0 | Raw LLM network request inspector — captures the exact provider wire payload plus response status, headers, and TTFB; inspect in-transcript via `/wire`. |
 
 Each extension is a self-contained package: its `package.json` carries its own
 version and the `omp.extensions` manifest, and the root
