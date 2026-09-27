@@ -18,6 +18,7 @@ Set Width 1400
 Set Height 900
 Set FontSize 14
 Set Theme "Catppuccin Mocha"
+Set TypingSpeed 75ms
 
 # Start omp with the extension loaded from this checkout
 Type "omp --no-title --no-session -e ."
@@ -27,9 +28,10 @@ Sleep 5s
 # Generate one real provider request
 Type "Reply with exactly: ok"
 Enter
-Sleep 25s
+Sleep 5s
 
-# The capture list
+# The capture list — slow typing so viewers can read the commands
+Set TypingSpeed 200ms
 Type "/wire"
 Enter
 Sleep 3s
